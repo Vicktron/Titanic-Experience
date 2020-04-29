@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Titanic</title>
+</head>
+<body>
+    {{ a }}
+    <h2>Predict Your Fate In The Titanic Sinking</h2>
+
+    <h3>Please Enter Your Details</h3>
+    <br>
+    <form method="post" enctype="multipart/form-data" action="PredictFate">
+    {% csrf_token %}
+        <div class="col-md-4 col-sm-4"><label for="fname">Name:</label> </div> <input name="name" type="text" value="Victor Isaac"><br><br>
+        <div class="col-md-4 col-sm-4"><label for="fname">Passenger Class:</label> </div> <input name="pclass" type="text" id="lname" value="1"><br><br>
+        <div class="col-md-4 col-sm-4"><label for="fname">Gender:</label> </div> <input name="sex" type="text"id="lname" value="MALE"><br><br>
+        <div class="col-md-4 col-sm-4"><label for="fname">Age:</label> </div> <input name="age" type="text" value="22"><br><br>
+        <div class="col-md-4 col-sm-4"><label for="fname">Family Size:</label> </div> <input name="familysize" type="text" value="3"><br><br>
+        <br>
+        <input type="submit" value="Submit"></div>
+
+    </form>
+    <br>
+    <h1> Your Fate{{ fate }}</h1>
+</body>
+</html>
